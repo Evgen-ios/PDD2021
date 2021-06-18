@@ -8,5 +8,5 @@
 import Foundation
 
 enum ResponseType {
-    case single, multiply, range, picker
+    case single, multiple, range
 }
