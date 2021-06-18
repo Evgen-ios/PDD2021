@@ -27,35 +27,34 @@ class ResultsViewController: UIViewController {
     
     
     func calculateResult() {
-        
         for value in answers {
             if (value.type == true) {
                 trueAnswers += 1;
             }
         }
+        
         if Question.all.count - trueAnswers < 3 {
-            setResult(answerErrors: Question.all.count - trueAnswers , label: CountAnswers.good.definition)
+            setResult(answerErrors: (Question.all.count - trueAnswers), label: CountAnswers.good.definition, smile: CountAnswers.good.rawValue )
         } else {
-            setResult(answerErrors: Question.all.count - trueAnswers , label: CountAnswers.bad.definition)
+            setResult(answerErrors: (Question.all.count - trueAnswers), label: CountAnswers.bad.definition, smile: CountAnswers.bad.rawValue )
         }
     }
     
-    func setResult(answerErrors: Int, label: String) {
-        if answerErrors == 0 {
-            resultLabel.text = "Отличный результат! Ошибок \(trueAnswers)"
-            resultAnswers.text = label
-            smileLabel.text = "\(CountAnswers.good.rawValue)"
-        } else {
-            resultLabel.text = "Ошибок \(trueAnswers)"
-            resultAnswers.text = label
-            smileLabel.text = "\(CountAnswers.bad.rawValue)"
-            
+    func setResult(answerErrors: Int, label: String, smile: Character) {
+        if answerErrors < 3 {
+            resultLabel.text = "Отличный результат! Ошибок \(answerErrors)"
+        } else  {
+            resultLabel.text = "Ошибок \(answerErrors)"
         }
+        resultAnswers.text = label
+        smileLabel.text = "\(smile)"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         calculateResult()
+        navigationItem.hidesBackButton = true
+        
     }
     
     

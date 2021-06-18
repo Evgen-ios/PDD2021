@@ -11,7 +11,6 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     
-    
     @IBOutlet weak var imageStackViev: UIImageView!
     @IBOutlet weak var questionlabel: UILabel!
     
@@ -102,8 +101,6 @@ class QuestionViewController: UIViewController {
         
         let answers = currentQuestion.answers
         let totalProgress = Float(questionIndex) / Float(Question.all.count)
-        
-        //navigationItem.title = "Вопрос №  \(questionIndex + 1)"
         questionlabel.text = currentQuestion.text
         imageStackViev.image = UIImage(named: "\(questionIndex + 1)")
         questionProgressView.setProgress(totalProgress, animated: true)
@@ -141,9 +138,9 @@ class QuestionViewController: UIViewController {
     }
     
     
-    func showAlertErrorCountAswer()  {
-        let alert = UIAlertController(title: "Ошибка", message: "Выбирите один варант ответа!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+    func showAlertErrorAswer()  {
+        let alert = UIAlertController(title: "Ответ не выбран", message: "Выбирите ваш варант ответа и нажмите ответить", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Продолжить", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
