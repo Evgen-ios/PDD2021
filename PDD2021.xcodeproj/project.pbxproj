@@ -36,6 +36,9 @@
 		7A80083F266E095200C63C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A800842266E095200C63C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A800844266E095200C63C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF5330626805ADC006CECDC /* 3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3; sourceTree = "<group>"; };
+		7AF5330726805ADC006CECDC /* 1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1; sourceTree = "<group>"; };
+		7AF5330826805ADC006CECDC /* 2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +112,23 @@
 		7A800835266E095000C63C72 /* PDD2021 */ = {
 			isa = PBXGroup;
 			children = (
+				7AF5330526805A22006CECDC /* Screeshots */,
 				7A03E056267885700078A511 /* App */,
 				7A03E054267885300078A511 /* Models */,
 				7A03E0552678855A0078A511 /* View */,
 				7A03E051266E17930078A511 /* View Controllers */,
 			);
 			path = PDD2021;
+			sourceTree = "<group>";
+		};
+		7AF5330526805A22006CECDC /* Screeshots */ = {
+			isa = PBXGroup;
+			children = (
+				7AF5330726805ADC006CECDC /* 1 */,
+				7AF5330826805ADC006CECDC /* 2 */,
+				7AF5330626805ADC006CECDC /* 3 */,
+			);
+			path = Screeshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
