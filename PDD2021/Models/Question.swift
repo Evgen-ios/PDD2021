@@ -8,6 +8,7 @@
 struct Question {
     let text: String
     let type: ResponseType
+    
     let image: String
     let answers: [Answer]
     
