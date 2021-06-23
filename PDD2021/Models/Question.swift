@@ -6,6 +6,7 @@
 //
 
 struct Question {
+    
     let text: String
     let type: ResponseType
     

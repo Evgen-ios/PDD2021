@@ -5,7 +5,7 @@
 //  Created by Evgeniy Goncharov on 15.06.2021.
 //
 
-enum CountAnswers: Character {
+ enum CountAnswers: Character {
     
     case good = "👍",
          bad = "😭"
